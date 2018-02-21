@@ -1,0 +1,29 @@
+<h1>All our Flats</h1>
+
+
+<%= link_to 'Add Flat', new_flat_path%>
+
+    <% @flats.each do |flat| %>
+
+
+
+        <div class="col-xs-12 col-sm-4">
+        <div class="cardtext">
+        <h1><%= flat.name %></h1>
+        <p><%= flat.address %></p>
+        <p><%= flat.description %></p>
+        <p><span class="glyphicon glyphicon-gbp" aria-hidden="true"><%= flat.price_per_night %></span></p>
+        <p><span class="glyphicon glyphicon-user" aria-hidden="true"><%= flat.number_of_guests %></span></p>
+        </div>
+
+        <div class="cardlinks">
+        <%= link_to 'Show', flat %>
+        <%= link_to 'Edit', edit_flat_path(flat) %>
+        <%= link_to 'Delete', flat, method: :delete, data: { confirm: 'Are you sure?' }%>
+        </div>
+        </div>
+
+    <% end %>
+
+
+

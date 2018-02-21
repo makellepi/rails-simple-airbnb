@@ -1,0 +1,29 @@
+<p>
+  <strong>Name:</strong>
+  <%= @flat.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @flat.address %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @flat.description %>
+</p>
+
+<p>
+  <strong>Price per Night:</strong>
+  <%= @flat.price_per_night %>
+</p>
+
+<p>
+  <strong>Number of Guests:</strong>
+  <%= @flat.number_of_guests %>
+</p>
+
+<img width="600" src="https://maps.googleapis.com/maps/api/staticmap?center=<%=@flat.address%>&zoom=13&size=600x300&maptype=roadmap
+&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318
+&markers=color:red%7Clabel:C%7C40.718217,-73.998284
+&key=AIzaSyAv6X4V49ONNHHdH0dBdHj_0DQiJbMLZCg">
